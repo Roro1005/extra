@@ -16,7 +16,9 @@ public class Move : MonoBehaviour
         MyButton.OnClickAsObservable().Subscribe(_ =>
         {
             //Target‚ð“®‚©‚·
-            StartCoroutine(EasingSample.Move(0.5f, new Vector3(5f, 0, 0), Target));
+            //StartCoroutine(EasingSample.Move(0.2f, new Vector3(2f, 0, 0), Target));
+
+            EasingSample.MoveRx(0.5f,new Vector3(3f,0,0),Target,EasingSample.EaseLinear);
         });
     }
 }
